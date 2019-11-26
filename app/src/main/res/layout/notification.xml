@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:layout_marginBottom="2dp"
+    android:layout_marginLeft="1dp"
+    android:layout_marginRight="1dp">
+
+    <RelativeLayout
+        android:id="@+id/notif_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/notif_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="This is a sample notif. This is a sample notif. This is a sample notif. This is a sample notif. This is a sample notif. This is a sample notif."
+            android:textSize="14sp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/notif_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="08/14/19 8:00AM"
+            android:layout_below="@id/notif_content"
+            android:textSize="12sp"
+            android:layout_alignParentEnd="true"
+            android:textStyle="italic"
+            android:textColor="#D15050"/>
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

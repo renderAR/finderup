@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/menu_viewreports"
+            android:icon="@drawable/ic_view_list"
+            android:title="View Reports" />
+        <item android:id="@+id/menu_addreport"
+            android:icon="@drawable/ic_add"
+            android:title="Add a Report" />
+        <item android:id="@+id/menu_chatuser"
+            android:icon="@drawable/ic_message"
+            android:title="User Messages"
+            app:actionViewClass="android.widget.TextView"/>
+        <item android:id="@+id/menu_notif"
+            android:icon="@drawable/ic_notifications"
+            android:title="Notifications"
+            app:actionViewClass="android.widget.TextView"/>
+    </group>
+
+    <item android:id="@+id/menu_logout"
+        android:icon="@drawable/ic_exit_to_app"
+        android:title="Logout" />
+
+</menu>

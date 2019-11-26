@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:layout_marginBottom="2dp"
+    android:layout_marginLeft="1dp"
+    android:layout_marginRight="1dp">
+
+    <RelativeLayout
+        android:id="@+id/chatroom_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="#FFFFFF">
+
+
+        <TextView
+            android:id="@+id/chatroom_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name"
+            android:textSize="14sp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/chatroom_lastmessagedate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/chatroom_username"
+            android:layout_alignBottom="@id/chatroom_username"
+            android:layout_marginLeft="6dp"
+            android:text="08/14/19 8:00AM"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            android:textColor="#444444"/>
+
+        <TextView
+            android:id="@+id/chatroom_lastmessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chatroom_username"
+            android:text="This is a sample comment. This is a sample comment. This is a sample comment. This is a sample comment. This is a sample comment. This is a sample comment."
+            android:textSize="12sp"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="14dp"
+            android:textColor="#D15050" />
+
+        <TextView
+            android:id="@+id/chatroom_receiverSeen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chatroom_lastmessage"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="2dp"
+            android:text="Seen at 08/14/19 8:00AM"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            android:textColor="#FF6474"/>
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

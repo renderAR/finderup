@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/filterlabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filter"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:id="@+id/filtercontent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filterlabel"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/radiogroup_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:weightSum="3"
+            android:layout_centerVertical="true">
+            <RadioButton
+                android:id="@+id/radio_filterall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="All reports"
+                android:textSize="10sp"
+                android:layout_weight="1"/>
+            <RadioButton
+                android:id="@+id/radio_filterfollow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Following"
+                android:textSize="10sp"
+                android:layout_weight="1"/>
+            <RadioButton
+                android:id="@+id/radio_filteryour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Your reports"
+                android:textSize="10sp"
+                android:layout_weight="1"/>
+        </RadioGroup>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkbox_filterlost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lost"
+                android:textSize="12sp"
+                android:saveEnabled="false"
+                android:layout_weight="1"
+                android:buttonTint="#ede600"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkbox_filterfound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Found"
+                android:layout_below="@id/checkbox_filterlost"
+                android:textSize="12sp"
+                android:saveEnabled="false"
+                android:layout_weight="1"
+                android:buttonTint="#00A0FF"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkbox_filterresolved"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Resolved"
+                android:layout_below="@id/checkbox_filterfound"
+                android:textSize="12sp"
+                android:saveEnabled="false"
+                android:layout_weight="1"
+                android:buttonTint="#00c700"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkbox_filterup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reported by UP users"
+                android:textSize="12sp"
+                android:layout_below="@id/radiogroup_filter"
+                android:saveEnabled="false"
+                android:layout_weight="1"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkbox_filternonup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reported by non-UP users"
+                android:layout_below="@id/checkbox_filterup"
+                android:textSize="12sp"
+                android:saveEnabled="false"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/sortlabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sort by"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/filtercontent"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="4dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sortlabel"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2">
+
+            <RadioGroup
+                android:id="@+id/radiogroup_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radio_sortupdated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date last updated"
+                    android:textSize="12sp"/>
+                <RadioButton
+                    android:id="@+id/radio_sortreported"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date reported"
+                    android:textSize="12sp"/>
+                <RadioButton
+                    android:id="@+id/radio_sortreporter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reporter name"
+                    android:textSize="12sp"/>
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <RadioGroup
+                android:id="@+id/radiogroup_sortorder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radio_sortasc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Asc order"
+                    android:textSize="12sp"/>
+                <RadioButton
+                    android:id="@+id/radio_sortdesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Desc order"
+                    android:textSize="12sp"/>
+            </RadioGroup>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">FinderUP</string>
+    <string name="login_text">Login with Google/UP Account</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="addreport_title"><font size="17">Item ( &lt;30 characters )</font></string>
+    <string name="addreport_content"><font size="17">Item Description ( &lt;500 characters )\n</font><font size="14"> \nTry to include more specific descriptions as much as possible (brand, color, etc)</font></string>
+    <string name="addreport_location"><font size="17">Item Location ( &lt;200 characters )\n</font><font size="14"> \nIf item is lost, include the last location the item was still in possession, if recalled.\nElse if item is found, include the location the item was found.</font></string>
+    <string name="addreport_other"><font size="17">Additional Info ( &lt;500 characters )\n</font><font size="14"> \nInclude here your other additional messages. (contact info, incentive, etc)</font></string>
+
+    <string-array name="test">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+    </string-array>
+</resources>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_ViewReport"
+    android:padding="6dp"
+    android:background="#EEEEEE"
+    android:id="@+id/reportmain_main"
+    android:visibility="invisible">
+
+    <TextView
+        android:id="@+id/reportmain_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A report title w/ 30 character"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/reportmain_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lost "
+        android:textStyle="bold"
+        android:textColor="#D15050"
+        android:textSize="14sp"
+        android:layout_below="@id/reportmain_title"/>
+
+
+    <RelativeLayout
+        android:id="@+id/reportmain_reportersection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reportmain_status">
+        <TextView
+            android:id="@+id/reportmain_reporter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name U. Username "
+            android:textColor="#222222"
+            android:textSize="13sp"
+            android:layout_centerVertical="true"
+            android:drawableRight="@drawable/ic_check_circle"/>
+        <TextView
+            android:id="@+id/reportmain_pm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_email"
+            android:text=" · "
+            android:layout_toEndOf="@id/reportmain_reporter"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/reportmain_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reportmain_reportersection"
+        android:text="08/14/19 8:00AM"
+        android:textColor="#444444"
+        android:textSize="11sp"
+        android:textStyle="italic" />
+
+    <RelativeLayout
+        android:id="@+id/reportmain_linkmain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reportmain_date">
+
+        <TextView
+            android:id="@+id/reportmain_linklabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Link by "
+            android:textColor="#222222"
+            android:textStyle="italic"
+            android:textSize="11sp"
+            android:layout_centerVertical="true"/>
+        <RelativeLayout
+            android:id="@+id/reportmain_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/reportmain_linklabel">
+            <TextView
+                android:id="@+id/reportmain_linkuser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name U. Username "
+                android:textColor="#222222"
+                android:textSize="11sp"
+                android:layout_centerVertical="true"
+                android:textStyle="italic"
+                android:drawableRight="@drawable/ic_check_circle"/>
+            <TextView
+                android:id="@+id/reportmain_linkpm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_email"
+                android:text=" · "
+                android:layout_toEndOf="@id/reportmain_linkuser"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/reportmain_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reportmain_linkmain"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/reportmain_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:maxHeight="300dp"
+            android:padding="4dp"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/reportmain_contenttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reportmain_image"
+            android:text="Report content. This contains description of item provided by user. It is recommended to include date and place the item was last recalled. Also include additional message from the user such as contact info."
+            android:textColor="#111111"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

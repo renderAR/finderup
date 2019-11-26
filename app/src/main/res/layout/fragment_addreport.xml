@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/addreport_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/addreport_status"
+                android:layout_marginBottom="4dp"
+                android:text="ITEM LOCATION, OTHER INFO, and IMAGE OF ITEM are not required but recommended"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12dp"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/addreport_title"
+                android:hint="@string/addreport_title"
+                android:inputType="textCapSentences"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="30"
+                android:layout_marginBottom="4dp"
+                android:layout_below="@id/addreport_hint"/>
+
+            <RadioGroup
+                android:id="@+id/addreport_status"
+                android:layout_below="@id/addreport_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp" >
+
+                <TextView
+                    android:id="@+id/addreport_statuslabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Item Status"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/addreport_statuslost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lost"
+                    android:layout_marginLeft="12dp"
+                    android:buttonTint="#ede600"/>
+                <RadioButton
+                    android:id="@+id/addreport_statusfound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Found"
+                    android:layout_marginLeft="12dp"
+                    android:buttonTint="#00A0FF"/>
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/addreport_content"
+                android:hint="@string/addreport_content"
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLength="500"
+                android:layout_below="@id/addreport_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|left"
+                android:layout_marginBottom="4dp"/>
+
+            <EditText
+                android:id="@+id/addreport_location"
+                android:hint="@string/addreport_location"
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLength="200"
+                android:layout_below="@id/addreport_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|left"
+                android:layout_marginBottom="4dp"/>
+
+            <EditText
+                android:id="@+id/addreport_other"
+                android:hint="@string/addreport_other"
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLength="500"
+                android:layout_below="@id/addreport_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|left"
+                android:layout_marginBottom="4dp"/>
+
+            <RelativeLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addreport_other"
+                android:id="@+id/addreport_image"
+                android:layout_marginBottom="4dp">
+                <TextView
+                    android:id="@+id/addreport_imagelabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Image of Item"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"/>
+
+                <Button
+                    android:id="@+id/addreport_imagebutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/addreport_imagelabel"
+                    android:text="Open Gallery"
+                    android:textSize="10sp"
+                    android:textAllCaps="false"
+                    android:visibility="visible"/>
+
+                <Button
+                    android:id="@+id/addreport_camerabutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/addreport_imagebutton"
+                    android:text="Open Camera"
+                    android:textSize="10sp"
+                    android:textAllCaps="false"
+                    android:visibility="visible"/>
+
+                <Button
+                    android:id="@+id/addreport_unloadbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/addreport_imagelabel"
+                    android:text="Unload image"
+                    android:textSize="10sp"
+                    android:textAllCaps="false"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout android:layout_width="fill_parent"
+                android:layout_height="47dp"
+                android:layout_below="@id/addreport_image"
+                android:id="@+id/addreport_add">
+
+                <Button
+                    android:id="@+id/addreport_addbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Add Report"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/addreport_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible"/>
+</FrameLayout>

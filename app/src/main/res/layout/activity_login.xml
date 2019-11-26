@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_Login">
+
+    <TextView
+        android:id="@+id/app_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UPLB Lost and Found App"
+        android:layout_centerInParent="true"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        android:textStyle="bold"/>
+
+    <ProgressBar
+        android:id="@+id/login_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_margin="8dp"
+        android:layout_below="@id/app_description"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_text"
+        android:layout_below="@id/login_progress"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFFFFF"
+        android:padding="6dp"/>
+
+    <Button
+        android:id="@+id/rate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_button"
+        android:layout_marginTop="2dp"
+        android:layout_centerHorizontal="true"
+        android:text="Rate This App"
+        android:textAllCaps="true"
+        android:textSize="10dp"/>
+
+</RelativeLayout>
